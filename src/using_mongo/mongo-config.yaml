@@ -1,0 +1,7 @@
+#configuration mapping (from kubernetes main website (configmap))
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-configTut
+data:
+  mongo-url: mongo-service
