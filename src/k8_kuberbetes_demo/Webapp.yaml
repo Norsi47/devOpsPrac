@@ -19,7 +19,26 @@ spec:
         - name: webapp
           image: nanajanashia/k8s-demo-app:v1.0
           ports:
-            - containerPort: 3000
+          - containerPort: 3000
+#          putting the variable names in webbapp
+          env:
+          - name: USER_NAME
+            valueFrom:
+              secretKeyRef:
+                name: mongo-secret
+                key: mongo-passWord
+          - name: USER_PWD
+            valueFrom:
+              secretKeyRef:
+                name: mongo-secret
+                key: mongo-passWord
+          - name: DB_URL
+#            to get value from mongo-config.yml use valueFrom (called configMapKeyRef)
+            valueFrom:
+              configMapKeyRef:
+                name: mongo-configTut
+                key: mongo-url
+
 
 #random line as seen in video ex
 ---
