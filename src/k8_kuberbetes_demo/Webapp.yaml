@@ -16,6 +16,7 @@ spec:
         app: webapp
     spec:
       containers:
+#        can change -name to something randomName
         - name: webapp
           image: nanajanashia/k8s-demo-app:v1.0
           ports:
