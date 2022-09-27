@@ -27,7 +27,7 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: mongo-secret
-                key: mongo-passWord
+                key: mongo-user
           - name: USER_PWD
             valueFrom:
               secretKeyRef:
@@ -38,6 +38,7 @@ spec:
             valueFrom:
               configMapKeyRef:
                 name: mongo-configTut
+#                reference is from mongo-configTut line 7
                 key: mongo-url
 
 
@@ -48,9 +49,11 @@ kind: Service
 metadata:
   name: webapp-service
 spec:
+  type: NodePort
   selector:
     app: webapp
   ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
+      nodePort: 30100
