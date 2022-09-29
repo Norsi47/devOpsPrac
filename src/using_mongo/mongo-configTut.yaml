@@ -5,3 +5,5 @@ metadata:
   name: mongo-configTut
 data:
   mongo-url: mongo-service
+
+#  follow video from scratch to see what I missed
