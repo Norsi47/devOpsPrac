@@ -1,0 +1,6 @@
+#lists example in yml
+- apple
+
+cities:
+  - new delhi
+  - New york

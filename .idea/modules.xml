@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/YamlCourse/YamlCourse.iml" filepath="$PROJECT_DIR$/YamlCourse/YamlCourse.iml" />
       <module fileurl="file://$PROJECT_DIR$/devOpsPrac.iml" filepath="$PROJECT_DIR$/devOpsPrac.iml" />
     </modules>
   </component>
